@@ -1,0 +1,16 @@
+<div class="well">Actual Cost of second: {{actualAmount}} </div>
+
+<div class="well">
+  Change cost of second:
+  <form class="form-inline" ng-submit="saveCost()">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+      <div class="input-group">
+        <div class="input-group-addon">$</div>
+        <input type="text" class="form-control" id="exampleInputAmount" ng-model="cost.amount" placeholder="Amount">
+        <div class="input-group-addon">.00</div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Change</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="alert alert-success" role="alert" ng-show="confirmation">Usage registered.</div>
+
+<div class="well">
+  <h3>Use Mobile:</h3>
+  <form class="form-inline" ng-submit="saveUsage()">
+    <div class="form-group">
+      <label class="sr-only" for="exampleInputAmount">Amount (in seconds)</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="exampleInputAmount" ng-model="cost.amount" placeholder="Amount">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Use</button>
+  </form>
+</div>
+
+<div class="well" ng-show="usages.length > 0">
+  <h3>Mobile Usage History</h3>
+  <div class="row">
+    <div class="col-xs-4">Amount</div>
+    <div class="col-xs-4">Time</div>
+    <div class="col-xs-4">Date</div>
+  </div>
+  <div class="row" ng-repeat="usage in usages">
+    <div class="col-xs-4">{{usage.amount}}</div>
+    <div class="col-xs-4">{{usage.time}}</div>
+    <div class="col-xs-4">{{usage.created_at}}</div>
+  </div>  
+</div>
